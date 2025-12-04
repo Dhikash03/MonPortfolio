@@ -365,3 +365,18 @@ footer {
     .nav-links.active { right: 0; }
     .hamburger { display: block; }
 }
+
+/* AJOUT POUR L'EFFET TYPEWRITER */
+.cursor {
+    display: inline-block;
+    width: 3px;
+    background-color: var(--text-main);
+    animation: blink 1s infinite;
+    margin-left: 5px;
+}
+
+@keyframes blink {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
