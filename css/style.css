@@ -117,10 +117,11 @@ ul { list-style: none; }
     top: 0;
     width: 100%;
     padding: 20px 0;
-    background: rgba(15, 15, 15, 0.9);
-    backdrop-filter: blur(10px);
+    background: rgba(15, 15, 15, 0.8); /* Fond plus transparent */
+    backdrop-filter: blur(15px); /* Flou plus fort (Glassmorphism) */
     z-index: 1000;
     border-bottom: 1px solid rgba(255,255,255,0.05);
+    transition: 0.4s ease;
 }
 
 .nav-content {
@@ -133,59 +134,93 @@ ul { list-style: none; }
     font-size: 1.5rem;
     font-weight: 800;
     letter-spacing: -1px;
+    color: var(--text-main);
 }
 
 .dot { color: var(--accent); }
 
-.nav-links { display: flex; gap: 30px; align-items: center; }
-.nav-links a { font-weight: 500; font-size: 0.95rem; color: var(--text-muted); }
-.nav-links a:hover { color: var(--text-main); }
-.btn-nav {
-    border: 1px solid var(--accent);
-    padding: 8px 20px;
-    border-radius: 20px;
-    color: var(--accent) !important;
+/* LISTE DES LIENS */
+.nav-links { 
+    display: flex; 
+    gap: 40px; /* Plus d'espace entre les liens */
+    align-items: center; 
 }
-.btn-nav:hover { background: var(--accent); color: #000 !important; }
-.hamburger { display: none; font-size: 1.5rem; cursor: pointer; }
 
-/* --- HERO --- */
-.hero {
-    height: 100vh;
-    display: flex;
-    align-items: center;
+/* STYLE DES LIENS (PROFIL, PROJETS...) */
+.nav-links li a {
     position: relative;
-    overflow: hidden;
-}
-
-.hero-content {
-    z-index: 2;
-    position: relative;
-}
-
-.tagline {
-    color: var(--accent);
-    font-weight: 600;
-    letter-spacing: 2px;
-    text-transform: uppercase;
     font-size: 0.9rem;
-    display: block;
-    margin-bottom: 20px;
-}
-
-.hero h1 {
-    font-size: 4rem;
-    line-height: 1.1;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 1.2rem;
+    font-weight: 500;
     color: var(--text-muted);
-    max-width: 600px;
-    margin-bottom: 40px;
+    text-transform: uppercase; /* Majuscules élégantes */
+    letter-spacing: 1px; /* Espacement des lettres */
+    padding: 5px 0;
+    transition: color 0.3s;
 }
 
+/* EFFET DE SURVOL (HOVER) */
+.nav-links li a:hover,
+.nav-links li a.active-link {
+    color: var(--text-main); /* Devient blanc */
+}
+
+/* LA LIGNE DORÉE QUI APPARAÎT */
+.nav-links li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--accent); /* Couleur Or */
+    transition: width 0.3s ease-in-out;
+}
+
+/* Animation de la ligne au survol OU si actif */
+.nav-links li a:hover::after,
+.nav-links li a.active-link::after {
+    width: 100%;
+}
+
+/* BOUTON CONTACT SPÉCIAL */
+.btn-nav {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 10px 25px !important; /* Force le padding */
+    border-radius: 30px;
+    color: var(--text-main) !important;
+    transition: 0.3s;
+}
+/* On enlève la ligne soulignée pour le bouton contact */
+.btn-nav::after { display: none; } 
+
+.btn-nav:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #000 !important;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 189, 57, 0.3);
+}
+
+/* MOBILE */
+.hamburger { display: none; font-size: 1.5rem; cursor: pointer; color: var(--text-main); }
+
+@media (max-width: 768px) {
+    .nav-links {
+        gap: 30px;
+        position: fixed;
+        right: -100%;
+        top: 70px;
+        height: 100vh;
+        background: #0f0f0f; /* Fond opaque sur mobile */
+        flex-direction: column;
+        width: 100%;
+        padding-top: 50px;
+        transition: 0.4s ease;
+        border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .nav-links.active { right: 0; }
+    .hamburger { display: block; }
+}
 /* Background Glow Effects */
 .glow {
     position: absolute;
