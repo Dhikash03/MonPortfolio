@@ -111,3 +111,34 @@ function init() {
         new TypeWriter(txtElement, words, wait);
     }
 }
+
+// ============================================
+// 6. SCROLL SPY (Menu Actif au défilement)
+// ============================================
+const sections = document.querySelectorAll('section');
+const navLi = document.querySelectorAll('.nav-links li a');
+
+window.addEventListener('scroll', () => {
+    let current = '';
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        
+        // Si on a scrollé jusqu'à cette section (-150px pour la marge du menu)
+        if (pageYOffset >= (sectionTop - 150)) {
+            current = section.getAttribute('id');
+        }
+    });
+
+    navLi.forEach(a => {
+        a.classList.remove('active-link');
+        // Si le href du lien correspond à l'ID de la section actuelle
+        if (a.getAttribute('href').includes(current)) {
+            // Mais on n'active pas le bouton Contact spécial
+            if(!a.classList.contains('btn-nav')) {
+                a.classList.add('active-link');
+            }
+        }
+    });
+});
