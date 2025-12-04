@@ -1,409 +1,276 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <title>Portfolio - Dhikash Janarthanan</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dhikash Janarthanan | Portfolio</title>
     
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
-    <link rel="stylesheet" href="css/aos.css">
-    <link rel="stylesheet" href="css/ionicons.min.css">
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/icomoon.css">
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  
-  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
-	    <div class="container">
-	      <a class="navbar-brand" href="index.html">DHIKASH.DEV</a>
-	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span> Menu
-	      </button>
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="#" class="logo">Dhikash<span class="dot">.</span>dev</a>
+            <ul class="nav-links">
+                <li><a href="#about">Profil</a></li>
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="#experience">Parcours</a></li>
+                <li><a href="#veille">Veille</a></li>
+                <li><a href="#contact" class="btn-nav">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
 
-	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav nav ml-auto">
-	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Accueil</span></a></li>
-	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>Profil</span></a></li>
-	          <li class="nav-item"><a href="#skills-section" class="nav-link"><span>Compétences</span></a></li>
-	          <li class="nav-item"><a href="#projects-section" class="nav-link"><span>Projets</span></a></li>
-	          <li class="nav-item"><a href="#parcours-section" class="nav-link"><span>Parcours</span></a></li>
-	          <li class="nav-item"><a href="#blog-section" class="nav-link"><span>Veille</span></a></li>
-	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
-	        </ul>
-	      </div>
-	    </div>
-	  </nav>
+    <header class="hero">
+        <div class="container hero-content">
+            <span class="tagline" data-aos="fade-down">Étudiant BTS SIO / SLAM</span>
+            <h1 data-aos="fade-up">Je conçois des expériences <br> <span class="gradient-text">Web & Mobile</span></h1>
+            <p data-aos="fade-up" data-aos-delay="200">
+                Bonjour, je suis <strong>Dhikash Janarthanan</strong>. Passionné par l'écosystème Java/Kotlin et le développement Fullstack. 
+                Je transforme des problèmes complexes en code élégant.
+            </p>
+            <div class="hero-btns" data-aos="fade-up" data-aos-delay="400">
+                <a href="#projects" class="btn btn-primary">Voir mes travaux</a>
+                <a href="lien/CV Dhikash Janarthanan.pdf" target="_blank" class="btn btn-outline">Mon CV <i class="fas fa-download"></i></a>
+            </div>
+        </div>
+        <div class="glow glow-1"></div>
+        <div class="glow glow-2"></div>
+    </header>
 
-    <section id="home-section" class="hero">
-		  <div class="home-slider owl-carousel">
-	      <div class="slider-item">
-	      	<div class="overlay"></div>
-	        <div class="container">
-	          <div class="row d-md-flex no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
-		          <div class="col-md-10 text-center ftco-animate">
-		          	<div class="text">
-		          		<span class="subheading">Portfolio 2025</span>
-			            <h1 class="mb-4">Dhikash Janarthanan</h1>
-                        <h2 class="mb-4 text-white">Développeur d'Applications <span class="text-gold">Fullstack</span></h2>
-			            <p>
-                            <a href="#projects-section" class="btn btn-primary py-3 px-4">Voir mes projets</a> 
-                            <a href="lien/CV Dhikash Janarthanan.pdf" target="_blank" class="btn btn-white btn-outline-white py-3 px-4">Mon CV</a>
-                        </p>
-		            </div>
-		          </div>
-	        	</div>
-	        </div>
-	      </div>
-	    </div>
-    </section>
-
-    <section class="ftco-section ftco-no-pb" id="about-section">
-    	<div class="container">
-    		<div class="row justify-content-center">
-    			<div class="col-md-10 heading-section text-center ftco-animate">
-		          	<span class="subheading">À Propos</span>
-		            <h2 class="mb-4">Qui suis-je ?</h2>
-		            <p class="lead">Étudiant en <strong>BTS SIO (SLAM)</strong>, je conçois des solutions digitales. Passionné par l'écosystème Java/Kotlin et le développement Web, je cherche à créer des applications performantes et intuitives.</p>
-                    
-                    <div class="row mt-5">
-                        <div class="col-md-4"><div class="skill-box"><h4 class="mt-2">Curieux</h4><p>Toujours en veille sur l'IA et la Tech.</p></div></div>
-                        <div class="col-md-4"><div class="skill-box"><h4 class="mt-2">Rigoureux</h4><p>Code propre et structuré.</p></div></div>
-                        <div class="col-md-4"><div class="skill-box"><h4 class="mt-2">Passionné</h4><p>L'informatique est plus qu'un métier.</p></div></div>
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-right">Mon Expertise</h2>
+            <div class="about-grid">
+                <div class="about-text glass-card" data-aos="fade-right">
+                    <h3>À propos</h3>
+                    <p>Actuellement en 2ème année de BTS SIO au Lycée Léonard de Vinci, je me spécialise dans le développement d'applications.</p>
+                    <p>Au-delà du code, je suis passionné par <strong>l'Intelligence Artificielle</strong> et la <strong>Robotique</strong>. Mon objectif est de poursuivre en licence spécialisée pour approfondir ces domaines.</p>
+                    <div class="stats">
+                        <div><span class="number">2+</span><br>Années d'études</div>
+                        <div><span class="number">6</span><br>Projets Majeurs</div>
+                        <div><span class="number">2</span><br>Stages Réalisés</div>
                     </div>
-	          </div>
-	        </div>
-    	</div>
-    </section>
-
-    <section class="ftco-section" id="skills-section">
-    	<div class="container">
-    		<div class="row justify-content-center pb-5">
-                <div class="col-md-12 heading-section text-center ftco-animate">
-                    <span class="subheading">Stack Technique</span>
-                    <h2 class="mb-4">Mes Compétences</h2>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-card glass-card" data-aos="zoom-in" data-aos-delay="100">
+                        <i class="fab fa-html5 skill-icon" style="color:#e34c26"></i>
+                        <h4>Front-End</h4>
+                        <p>HTML5, CSS3, JavaScript</p>
+                    </div>
+                    <div class="skill-card glass-card" data-aos="zoom-in" data-aos-delay="200">
+                        <i class="fab fa-php skill-icon" style="color:#777bb4"></i>
+                        <h4>Back-End</h4>
+                        <p>PHP, SQL, API Rest</p>
+                    </div>
+                    <div class="skill-card glass-card" data-aos="zoom-in" data-aos-delay="300">
+                        <i class="fab fa-android skill-icon" style="color:#3ddc84"></i>
+                        <h4>Mobile / App</h4>
+                        <p>Java, Kotlin, Android</p>
+                    </div>
+                    <div class="skill-card glass-card" data-aos="zoom-in" data-aos-delay="400">
+                        <i class="fab fa-git-alt skill-icon" style="color:#f05032"></i>
+                        <h4>Outils</h4>
+                        <p>Git, GitHub, IntelliJ, VS Code</p>
+                    </div>
                 </div>
             </div>
-    		<div class="row">
-    			<div class="col-md-3 col-6 mb-4 ftco-animate">
-                    <div class="skill-box">
-                        <img src="images/HTML5_logo_and_wordmark.png" class="skill-icon" alt="HTML">
-                        <h5>HTML / CSS</h5>
-                    </div>
-    			</div>
-    			<div class="col-md-3 col-6 mb-4 ftco-animate">
-                    <div class="skill-box">
-                        <img src="images/JS.png" class="skill-icon" alt="JS">
-                        <h5>JavaScript</h5>
-                    </div>
-    			</div>
-                <div class="col-md-3 col-6 mb-4 ftco-animate">
-                    <div class="skill-box">
-                        <img src="images/PHP.png" class="skill-icon" alt="PHP">
-                        <h5>PHP</h5>
-                    </div>
-    			</div>
-                <div class="col-md-3 col-6 mb-4 ftco-animate">
-                    <div class="skill-box">
-                        <img src="images/SQL.png" class="skill-icon" alt="SQL">
-                        <h5>SQL & BD</h5>
-                    </div>
-    			</div>
-                <div class="col-md-3 col-6 mb-4 ftco-animate">
-                    <div class="skill-box">
-                        <img src="images/Python.png" class="skill-icon" alt="Python">
-                        <h5>Python</h5>
-                    </div>
-    			</div>
-                 <div class="col-md-3 col-6 mb-4 ftco-animate">
-                    <div class="skill-box">
-                        <img src="images/Kotlin.png" class="skill-icon" alt="Kotlin">
-                        <h5>Kotlin</h5>
-                    </div>
-    			</div>
-                <div class="col-md-3 col-6 mb-4 ftco-animate">
-                    <div class="skill-box">
-                        <span class="icon-code" style="font-size:40px; color:#ffbd39;"></span>
-                        <h5 class="mt-2">Java</h5>
-                    </div>
-    			</div>
-                <div class="col-md-3 col-6 mb-4 ftco-animate">
-                    <div class="skill-box">
-                        <span class="icon-git" style="font-size:40px; color:#ffbd39;"></span>
-                        <h5 class="mt-2">Git & Github</h5>
-                    </div>
-    			</div>
-    		</div>
-    	</div>
+        </div>
     </section>
 
-    <section class="ftco-section" id="projects-section">
-    	<div class="container">
-    		<div class="row justify-content-center pb-5">
-                <div class="col-md-12 heading-section text-center ftco-animate">
-                    <span class="subheading">Portfolio</span>
-                    <h2 class="mb-4">Mes Réalisations</h2>
-                    <p>Projets scolaires, stages et développements personnels.</p>
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-right">Projets Récents</h2>
+            <div class="projects-grid">
+                
+                <div class="project-card glass-card" data-aos="fade-up">
+                    <div class="project-img" style="background-image: url('images/Augustine.jpg');"></div>
+                    <div class="project-info">
+                        <div class="tags">
+                            <span class="tag">HTML/CSS</span>
+                            <span class="tag">JS</span>
+                        </div>
+                        <h3>Site Augustine</h3>
+                        <p>Site vitrine complet développé pour l'association Tournesol durant mon stage de 1ère année.</p>
+                        <a href="https://github.com/ljules/Augustine-2024" target="_blank" class="link-arrow">Voir sur GitHub <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="project-card glass-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-img" style="background-image: url('images/Launcher-MC.png');"></div>
+                    <div class="project-info">
+                        <div class="tags">
+                            <span class="tag">Java</span>
+                            <span class="tag">JavaFX</span>
+                        </div>
+                        <h3>Launcher Minecraft</h3>
+                        <p>Création d'un lanceur personnalisé supportant les mods Forge et l'authentification Microsoft (Stage WeeklyTech).</p>
+                        <a href="https://github.com/Dhikash03/Laucher_Minecraft" target="_blank" class="link-arrow">Voir sur GitHub <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="project-card glass-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-img" style="background-image: url('images/work-1.jpg');"></div> <div class="project-info">
+                        <div class="tags">
+                            <span class="tag">PHP</span>
+                            <span class="tag">SQL</span>
+                        </div>
+                        <h3>Géoworld</h3>
+                        <p>Application pédagogique de géopolitique permettant de manipuler des données démographiques réelles.</p>
+                        <a href="https://github.com/Dhikash03/Geoworld" target="_blank" class="link-arrow">Voir sur GitHub <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                 <div class="project-card glass-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-img" style="background-image: url('images/work-2.jpg');"></div> <div class="project-info">
+                        <div class="tags">
+                            <span class="tag">Kotlin</span>
+                            <span class="tag">Mobile</span>
+                        </div>
+                        <h3>Kotlin Aventure</h3>
+                        <p>Jeu d'aventure textuel sur mobile avec gestion d'inventaire, combats et narration interactive.</p>
+                        <a href="https://github.com/Dhikash03/Kotlin_Aventure_Sprint3" target="_blank" class="link-arrow">Voir sur GitHub <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="section bg-darker">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-right">Mon Parcours</h2>
+            <div class="timeline">
+                
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2023 - 2025</div>
+                    <div class="timeline-content glass-card">
+                        <h3>BTS SIO (Option SLAM)</h3>
+                        <p class="school">Lycée Léonard de Vinci, Melun</p>
+                        <p>Apprentissage intensif du développement, gestion de projet Agile et cybersécurité.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-left" data-aos-delay="100">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2024 - 2025</div>
+                    <div class="timeline-content glass-card">
+                        <h3>Développeur Java (Stage)</h3>
+                        <p class="school">WeeklyTech</p>
+                        <p>Développement fullstack d'un launcher Minecraft, maintenance et corrections de bugs.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-left" data-aos-delay="200">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2019 - 2022</div>
+                    <div class="timeline-content glass-card">
+                        <h3>Bac Pro Systèmes Numériques</h3>
+                        <p class="school">Lycée de la Tourelle</p>
+                        <p>Option RISC (Réseaux). Mention Bien.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="veille" class="section">
+        <div class="container">
+            <h2 class="section-title">Veille Technologique</h2>
+            <div class="veille-container glass-card" data-aos="zoom-in">
+                <div class="row">
+                    <div class="col-text">
+                        <span class="tag mb-2">Robotique & IA</span>
+                        <h3>Le Robot "Blue" de Nvidia</h3>
+                        <p>Présenté à la GTC 2025, ce robot marque une avancée majeure dans l'IA embarquée. Contrairement aux robots scriptés, Blue utilise une IA générative multimodale pour interagir naturellement.</p>
+                        <ul class="veille-list">
+                            <li><i class="fas fa-check"></i> Interaction Homme-Machine fluide</li>
+                            <li><i class="fas fa-check"></i> IA DeepMind x Nvidia</li>
+                            <li><i class="fas fa-check"></i> Applications : Services & Divertissement</li>
+                        </ul>
+                        <div class="sources mt-3">
+                            <small>Sources : LeBigData, Conférence GTC</small>
+                        </div>
+                    </div>
+                    <div class="col-video">
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/u6wOyM5Bq0w" title="Veille Vidéo" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>
                 </div>
             </div>
-            
-    		<div class="row">
-                <div class="col-md-4 mb-4 ftco-animate">
-                    <div class="project-card">
-                        <div class="project-img" style="background-image: url('images/Augustine.jpg');"></div>
-                        <div class="project-content">
-                            <h3>Site Augustine</h3>
-                            <div class="mb-3">
-                                <span class="badge-tech">HTML/CSS</span>
-                                <span class="badge-tech">JS</span>
-                                <span class="badge-tech">Stage</span>
-                            </div>
-                            <p>Développement complet d'un site vitrine pour l'association Tournesol.</p>
-                            <a href="https://github.com/ljules/Augustine-2024" target="_blank" class="btn-project">Voir sur GitHub</a>
-                        </div>
-                    </div>
-                </div>
+        </div>
+    </section>
 
-                <div class="col-md-4 mb-4 ftco-animate">
-                    <div class="project-card">
-                        <div class="project-img" style="background-image: url('images/Launcher-MC.png');"></div>
-                        <div class="project-content">
-                            <h3>Launcher Minecraft</h3>
-                            <div class="mb-3">
-                                <span class="badge-tech">Java</span>
-                                <span class="badge-tech">JavaFX</span>
-                                <span class="badge-tech">Stage</span>
-                            </div>
-                            <p>Création d'un lanceur personnalisé supportant les mods Forge.</p>
-                            <a href="https://github.com/Dhikash03/Laucher_Minecraft" target="_blank" class="btn-project">Voir sur GitHub</a>
-                        </div>
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="contact-wrapper glass-card" data-aos="fade-up">
+                <div class="contact-info">
+                    <h3>Restons en contact</h3>
+                    <p>Je suis à la recherche d'une alternance ou de nouveaux défis. N'hésitez pas à me contacter.</p>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>dhikash9504@gmail.com</span>
                     </div>
-                </div>
-
-                <div class="col-md-4 mb-4 ftco-animate">
-                    <div class="project-card">
-                        <div class="project-img" style="background-image: url('images/work-1.jpg');"></div>
-                        <div class="project-content">
-                            <h3>Géoworld</h3>
-                            <div class="mb-3">
-                                <span class="badge-tech">PHP</span>
-                                <span class="badge-tech">SQL</span>
-                                <span class="badge-tech">Bootstrap</span>
-                            </div>
-                            <p>Application de géopolitique (statistiques pays).</p>
-                            <a href="https://github.com/Dhikash03/Geoworld" target="_blank" class="btn-project">Voir sur GitHub</a>
-                        </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <span>07 58 87 56 47</span>
                     </div>
-                </div>
-
-                <div class="col-md-4 mb-4 ftco-animate">
-                    <div class="project-card">
-                        <div class="project-img" style="background-image: url('images/work-2.jpg');"></div>
-                        <div class="project-content">
-                            <h3>Kotlin Aventure</h3>
-                            <div class="mb-3">
-                                <span class="badge-tech">Kotlin</span>
-                                <span class="badge-tech">POO</span>
-                            </div>
-                            <p>Jeu d'aventure textuel complet avec gestion de personnage.</p>
-                            <a href="https://github.com/Dhikash03/Kotlin_Aventure_Sprint3" target="_blank" class="btn-project">Voir sur GitHub</a>
-                        </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Villiers le Bel, France</span>
                     </div>
                 </div>
                 
-                 <div class="col-md-4 mb-4 ftco-animate">
-                    <div class="project-card">
-                        <div class="project-img" style="background-image: url('images/work-3.jpg');"></div>
-                        <div class="project-content">
-                            <h3>Savon API</h3>
-                            <div class="mb-3">
-                                <span class="badge-tech">PHP</span>
-                                <span class="badge-tech">API Rest</span>
-                            </div>
-                            <p>Backend pour une application de gestion de stock.</p>
-                            <a href="https://github.com/Dhikash03/SavonAPI_2" target="_blank" class="btn-project">Voir sur GitHub</a>
-                        </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Nom" required>
                     </div>
-                </div>
-
-                 <div class="col-md-4 mb-4 ftco-animate">
-                    <div class="project-card">
-                        <div class="project-img" style="background-image: url('images/work-4.jpg');"></div>
-                        <div class="project-content">
-                            <h3>Sushi App</h3>
-                            <div class="mb-3">
-                                <span class="badge-tech">JavaScript</span>
-                                <span class="badge-tech">DOM</span>
-                            </div>
-                            <p>Site e-commerce dynamique pour un restaurant de sushis.</p>
-                            <a href="https://github.com/Dhikash03/" target="_blank" class="btn-project">Voir sur GitHub</a>
-                        </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Email" required>
                     </div>
-                </div>
-            </div>
-    	</div>
-    </section>
-
-    <section class="ftco-section ftco-no-pb" id="parcours-section">
-    	<div class="container">
-    		<div class="row justify-content-center pb-5">
-                <div class="col-md-10 heading-section text-center ftco-animate">
-                    <span class="subheading">Curriculum Vitae</span>
-                    <h2 class="mb-4">Mon Parcours</h2>
-                </div>
-            </div>
-    		<div class="row">
-    			<div class="col-md-6">
-    				<div class="resume-wrap ftco-animate">
-    					<span class="date">2023 - 2025</span>
-    					<h2>BTS SIO - Option SLAM</h2>
-    					<span class="position">Lycée Léonard de Vinci, Melun</span>
-    					<p class="mt-4">Développement Web, Mobile & Gestion de projet.</p>
-    				</div>
-    			</div>
-    			<div class="col-md-6">
-    				<div class="resume-wrap ftco-animate">
-    					<span class="date">2019 - 2022</span>
-    					<h2>Bac Pro Systèmes Numériques</h2>
-    					<span class="position">Lycée de la Tourelle</span>
-    					<p class="mt-4">Mention Bien - Spécialité Réseaux.</p>
-    				</div>
-    			</div>
-    		</div>
-    	</div>
-    </section>
-
-    <section class="ftco-section" id="blog-section">
-      <div class="container">
-        <div class="row justify-content-center mb-5 pb-5">
-          <div class="col-md-7 heading-section text-center ftco-animate">
-            <span class="subheading">Veille Technologique</span>
-            <h2 class="mb-4">Robotique & IA</h2>
-            <p>Mon sujet de veille : L'évolution de la robotique humanoïde avec l'IA.</p>
-          </div>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-md-10">
-                <div class="project-card p-4">
-                    <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/u6wOyM5Bq0w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div class="form-group">
+                        <textarea rows="5" placeholder="Message" required></textarea>
                     </div>
-
-                    <h3 class="text-white mt-3">Focus : Le Robot "Blue" de Nvidia</h3>
-                    <p class="mt-3">Présenté à la GTC 2025, Blue est un robot humanoïde interactif conçu avec Google DeepMind. Il marque un tournant dans l'IA embarquée.</p>
-                    <hr style="border-color:#333;">
-                    <div class="row mt-4">
-                        <div class="col-md-6">
-                            <h5 style="color:#ffbd39">Thèmes clés</h5>
-                            <ul>
-                                <li>Interaction Homme-Machine (HRI)</li>
-                                <li>IA Générative embarquée</li>
-                            </ul>
-                        </div>
-                        <div class="col-md-6">
-                            <h5 style="color:#ffbd39">Sources</h5>
-                            <ul>
-                                <li>LeBigData.fr</li>
-                                <li>Conférence GTC Nvidia 2025</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
-      <div class="container">
-      	<div class="row justify-content-center mb-5 pb-3">
-          <div class="col-md-7 heading-section text-center ftco-animate">
-            <span class="subheading">Contact</span>
-            <h2 class="mb-4">Travaillons ensemble</h2>
-          </div>
-        </div>
-
-        <div class="row d-flex contact-info mb-5">
-            <div class="col-md-6 mb-4">
-                 <div class="row">
-                      <div class="col-md-12 mb-4">
-                        <div class="align-self-stretch box p-4 text-center contact-box">
-                            <div class="icon d-flex align-items-center justify-content-center">
-                                <span class="icon-phone2"></span>
-                            </div>
-                            <h3 class="mb-4">Téléphone</h3>
-                            <p><a href="tel://0758875647">07 58 87 56 47</a></p>
-                        </div>
-                      </div>
-                      <div class="col-md-12">
-                        <div class="align-self-stretch box p-4 text-center contact-box">
-                            <div class="icon d-flex align-items-center justify-content-center">
-                                <span class="icon-envelope"></span>
-                            </div>
-                            <h3 class="mb-4">Email</h3>
-                            <p><a href="mailto:dhikash9504@gmail.com">dhikash9504@gmail.com</a></p>
-                        </div>
-                      </div>
-                 </div>
-            </div>
-
-            <div class="col-md-6 d-flex">
-                <form action="#" class="bg-light p-4 p-md-5 contact-form w-100">
-                  <h3 class="mb-4 text-white">M'envoyer un message</h3>
-                  <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Votre Nom">
-                  </div>
-                  <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Votre Email">
-                  </div>
-                  <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Sujet">
-                  </div>
-                  <div class="form-group">
-                    <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
-                  </div>
-                  <div class="form-group">
-                    <input type="submit" value="Envoyer" class="btn btn-primary py-3 px-5">
-                  </div>
+                    <button type="submit" class="btn btn-primary">Envoyer</button>
                 </form>
             </div>
         </div>
-      </div>
     </section>
-    
-    <footer class="ftco-footer ftco-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 text-center">
-            <p>
-                Copyright &copy;<script>document.write(new Date().getFullYear());</script> Dhikash Janarthanan
-            </p>
-          </div>
-        </div>
-      </div>
-    </footer>
-    
-  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.easing.1.3.js"></script>
-  <script src="js/jquery.waypoints.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/aos.js"></script>
-  <script src="js/jquery.animateNumber.min.js"></script>
-  <script src="js/scrollax.min.js"></script>
-  <script src="js/main.js"></script>
-    
-  </body>
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2025 Dhikash Janarthanan. Tous droits réservés.</p>
+            <div class="socials">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+        
+        // Menu Mobile simple
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
 </html>
