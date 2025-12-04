@@ -415,3 +415,27 @@ footer {
     50% { opacity: 1; }
     100% { opacity: 0; }
 }
+
+/* --- PHOTO DE PROFIL --- */
+.profile-container {
+    display: flex;
+    justify-content: center; /* Centre la photo */
+    margin-bottom: 25px;
+}
+
+.profile-img {
+    width: 140px;      /* Taille de la photo */
+    height: 140px;
+    border-radius: 50%; /* Rend la photo ronde */
+    object-fit: cover;  /* Évite de déformer l'image si elle n'est pas carrée */
+    border: 3px solid var(--accent); /* Bordure dorée */
+    box-shadow: 0 0 25px rgba(255, 189, 57, 0.3); /* Lueur dorée autour */
+    transition: transform 0.3s ease;
+}
+
+/* Petit effet quand on passe la souris sur la photo */
+.profile-img:hover {
+    transform: scale(1.05) rotate(3deg);
+    box-shadow: 0 0 35px rgba(138, 43, 226, 0.6); /* La lueur devient violette */
+    border-color: var(--primary);
+}
