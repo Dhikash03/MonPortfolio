@@ -245,15 +245,16 @@
                     </div>
                 </div>
 
-                <form action="https://formsubmit.co/dhikash9504@gmail.com" method="POST" class="contact-form">
-    
-    <input type="hidden" name="_next" value="https://portofolio-janarthanan-dhikash.vercel.app/thanks.html">
-    <input type="hidden" name="_subject" value="Nouveau message depuis ton Portfolio !">
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_template" value="table">
+                <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" id="form">
+
+    <input type="hidden" name="access_key" value="12e7fad8-b84a-49bd-a7df-42a66b15d4ed">
+
+    <input type="hidden" name="subject" value="Nouveau contact Portfolio">
+    <input type="hidden" name="from_name" value="Portfolio Contact">
+    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
     <div class="form-group">
-        <input type="text" name="nom" placeholder="Votre Nom" required>
+        <input type="text" name="name" placeholder="Votre Nom" required>
     </div>
     <div class="form-group">
         <input type="email" name="email" placeholder="Votre Email" required>
@@ -262,8 +263,56 @@
         <textarea name="message" rows="5" placeholder="Votre Message" required></textarea>
     </div>
     
-    <button type="submit" class="btn btn-primary">Envoyer</button>
+    <button type="submit" class="btn btn-primary">Envoyer le message</button>
+
+    <p id="result" style="margin-top: 15px; display: none;"></p>
+
 </form>
+
+<script>
+const form = document.getElementById('form');
+const result = document.getElementById('result');
+
+form.addEventListener('submit', function(e) {
+  e.preventDefault();
+  const formData = new FormData(form);
+  const object = Object.fromEntries(formData);
+  const json = JSON.stringify(object);
+  
+  result.style.display = "block";
+  result.innerHTML = "Envoi en cours...";
+  result.style.color = "#ffbd39"; // Couleur Or
+
+  fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: json
+        })
+        .then(async (response) => {
+            let json = await response.json();
+            if (response.status == 200) {
+                result.innerHTML = "Message envoyé avec succès ! 🚀";
+                result.style.color = "#00e676"; // Vert
+                form.reset(); // Vide le formulaire
+                setTimeout(() => {
+                    result.style.display = "none";
+                }, 5000);
+            } else {
+                console.log(response);
+                result.innerHTML = json.message;
+                result.style.color = "red";
+            }
+        })
+        .catch(error => {
+            console.log(error);
+            result.innerHTML = "Une erreur s'est produite.";
+            result.style.color = "red";
+        });
+});
+</script>
             </div>
         </div>
     </section>
