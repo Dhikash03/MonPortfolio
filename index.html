@@ -8,7 +8,6 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.css">
-    
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/magnific-popup.css">
@@ -17,13 +16,69 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        /* Force Dark Theme Backgrounds */
+        body, .ftco-section, .ftco-footer { background-color: #121212 !important; color: #e0e0e0 !important; }
+        .bg-light { background-color: #1e1e1e !important; }
+        
+        /* Typography alignment */
+        h1, h2, h3, h4 { color: #ffffff !important; font-weight: 600 !important; }
+        .subheading { color: #ffbd39 !important; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; }
+        
+        /* Navbar */
+        .ftco-navbar-light { background: #000 !important; top: 0; }
+        .navbar-brand { color: #ffbd39 !important; font-weight: 700; border: 2px solid #ffbd39; padding: 5px 10px; }
+        
+        /* CARDS PROJETS (ALIGNEMENT PARFAIT) */
+        .project-card {
+            background: #1e1e1e;
+            border: 1px solid #333;
+            border-radius: 8px;
+            overflow: hidden;
+            height: 100%;
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        .project-card:hover { transform: translateY(-5px); border-color: #ffbd39; }
+        .project-img {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            border-bottom: 1px solid #333;
+        }
+        .project-content { padding: 20px; flex-grow: 1; display: flex; flex-direction: column; }
+        .badge-tech {
+            font-size: 0.8rem;
+            background: #333;
+            color: #ffbd39;
+            padding: 3px 8px;
+            border-radius: 4px;
+            margin-right: 5px;
+            display: inline-block;
+            margin-bottom: 5px;
+        }
+        .btn-project { margin-top: auto; border: 1px solid #ffbd39; color: #ffbd39; width: 100%; display: block; text-align: center; padding: 10px; border-radius: 4px; }
+        .btn-project:hover { background: #ffbd39; color: #000; text-decoration: none; }
+
+        /* TIMELINE PARCOURS */
+        .resume-wrap { background: #1e1e1e !important; border-left: 3px solid #ffbd39; }
+        
+        /* COMPÉTENCES */
+        .skill-box { background: #1e1e1e; padding: 20px; border-radius: 5px; text-align: center; height: 100%; border: 1px solid #333; }
+        .skill-icon { width: 50px; height: 50px; margin-bottom: 15px; }
+        
+        /* CONTACT FORM */
+        .form-control { background: #2b2b2b !important; border: 1px solid #444 !important; color: white !important; }
+    </style>
   </head>
+  
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-	  
-	  
+
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
 	    <div class="container">
-	      <a class="navbar-brand" href="index.html">Dhikash</a>
+	      <a class="navbar-brand" href="index.html">DHIKASH.DEV</a>
 	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
@@ -32,11 +87,9 @@
 	        <ul class="navbar-nav nav ml-auto">
 	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Accueil</span></a></li>
 	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>Profil</span></a></li>
-	          <li class="nav-item"><a href="#sio-section" class="nav-link"><span>BTS SIO</span></a></li>
-	          <li class="nav-item"><a href="#parcours-section" class="nav-link"><span>Parcours</span></a></li>
 	          <li class="nav-item"><a href="#skills-section" class="nav-link"><span>Compétences</span></a></li>
 	          <li class="nav-item"><a href="#projects-section" class="nav-link"><span>Projets</span></a></li>
-	          <li class="nav-item"><a href="#stage-section" class="nav-link"><span>Stages</span></a></li>
+	          <li class="nav-item"><a href="#parcours-section" class="nav-link"><span>Parcours</span></a></li>
 	          <li class="nav-item"><a href="#blog-section" class="nav-link"><span>Veille</span></a></li>
 	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
 	        </ul>
@@ -45,22 +98,19 @@
 	  </nav>
 
     <section id="home-section" class="hero">
-		  <div class="home-slider  owl-carousel">
-	      <div class="slider-item ">
+		  <div class="home-slider owl-carousel">
+	      <div class="slider-item">
 	      	<div class="overlay"></div>
 	        <div class="container">
-	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
-	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/Dhikash.jpg);">
-	          		<div class="overlay"></div>
-	          	</div>
-		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+	          <div class="row d-md-flex no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
+		          <div class="col-md-10 text-center ftco-animate">
 		          	<div class="text">
-		          		<span class="subheading">Bienvenue sur mon Portfolio</span>
-			            <h1 class="mb-4 mt-3">Dhikash Janarthanan</h1>
-                        <h2 class="mb-4">Étudiant Développeur d'Applications (BTS SIO)</h2>
+		          		<span class="subheading">Portfolio 2025</span>
+			            <h1 class="mb-4">Dhikash Janarthanan</h1>
+                        <h2 class="mb-4" style="color:white;">Développeur d'Applications <span style="color:#ffbd39">Fullstack</span></h2>
 			            <p>
-                            <a href="#contact-section" class="btn btn-primary py-3 px-4">Me contacter</a> 
-                            <a href="lien/CV Dhikash Janarthanan.pdf" target="_blank" class="btn btn-white btn-outline-white py-3 px-4">Consulter le CV</a>
+                            <a href="#projects-section" class="btn btn-primary py-3 px-4">Voir mes projets</a> 
+                            <a href="lien/CV Dhikash Janarthanan.pdf" target="_blank" class="btn btn-white btn-outline-white py-3 px-4">Mon CV</a>
                         </p>
 		            </div>
 		          </div>
@@ -70,387 +120,249 @@
 	    </div>
     </section>
 
-    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    <section class="ftco-section ftco-no-pb" id="about-section">
     	<div class="container">
-    		<div class="row d-flex">
-    			<div class="col-md-6 col-lg-5 d-flex">
-    				<div class="img-about img d-flex align-items-stretch">
-    					<div class="overlay"></div>
-	    				<div class="img d-flex align-self-stretch align-items-center" style="background-image:url(images/Dhikash.jpg);">
-	    				</div>
-    				</div>
-    			</div>
-    			<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
-    				<div class="row justify-content-start pb-3">
-		          <div class="col-md-12 heading-section ftco-animate">
-		          	<h1 class="big">Profil</h1>
-		            <h2 class="mb-4">À propos de moi</h2>
-		            <p>Actuellement en 2ème année de BTS SIO (Services Informatiques aux Organisations) option SLAM, je me spécialise dans le développement d'applications web et logicielles.</p>
-                    <p>Passionné par l'algorithmique et les nouvelles technologies (notamment l'IA), j'ai acquis de solides bases techniques allant de la conception de bases de données au développement orienté objet. Curieux et rigoureux, je cherche aujourd'hui à mettre mes compétences au service de projets concrets.</p>
-		            <ul class="about-info mt-4 px-md-0 px-2">
-		            	<li class="d-flex"><span>Nom:</span> <span>Dhikash Janarthanan</span></li>
-		            	<li class="d-flex"><span>Email:</span> <span>dhikash9504@gmail.com</span></li>
-		            	<li class="d-flex"><span>Tél:</span> <span>07 58 87 56 47</span></li>
-                        </ul>
-		          </div>
-	          </div>
-	          <div class="counter-wrap ftco-animate d-flex mt-md-3">
-              <div class="text">
-              	<p class="mb-4">
-	                <span class="number" data-number="5">0</span>
-	                <span>Projets Réalisés</span>
-                </p>
-                <p><a href="lien/CV Dhikash Janarthanan.pdf" target="_blank" class="btn btn-primary py-3 px-3">Télécharger CV</a></p>
-              </div>
+    		<div class="row justify-content-center">
+    			<div class="col-md-10 heading-section text-center ftco-animate">
+		          	<span class="subheading">À Propos</span>
+		            <h2 class="mb-4">Qui suis-je ?</h2>
+		            <p class="lead">Étudiant en <strong>BTS SIO (SLAM)</strong>, je conçois des solutions digitales. Passionné par l'écosystème Java/Kotlin et le développement Web, je cherche à créer des applications performantes et intuitives.</p>
+                    
+                    <div class="row mt-5">
+                        <div class="col-md-4"><div class="skill-box"><h4 class="mt-2">Curieux</h4><p>Toujours en veille sur l'IA et la Tech.</p></div></div>
+                        <div class="col-md-4"><div class="skill-box"><h4 class="mt-2">Rigoureux</h4><p>Code propre et structuré.</p></div></div>
+                        <div class="col-md-4"><div class="skill-box"><h4 class="mt-2">Passionné</h4><p>L'informatique est plus qu'un métier.</p></div></div>
+                    </div>
 	          </div>
 	        </div>
-        </div>
-        
-        <div class="row justify-content-center mt-5">
-            <div class="col-md-10">
-                <div class="row">
-                    <div class="col-md-3 animate-box" data-animate-effect="fadeInLeft">
-                        <div class="services color-1">
-                            <span class="icon2"><i class="icon-book"></i></span>
-                            <h3>Lecture</h3>
-                        </div>
-                    </div>
-                    <div class="col-md-3 animate-box" data-animate-effect="fadeInRight">
-                        <div class="services color-2">
-                            <span class="icon2"><i class="icon-gamepad"></i></span>
-                            <h3>Jeux Vidéo</h3>
-                        </div>
-                    </div>
-                    <div class="col-md-3 animate-box" data-animate-effect="fadeInTop">
-                        <div class="services color-3">
-                            <span class="icon2"><i class="icon-gear"></i></span>
-                            <h3>Robotique</h3>
-                        </div>
-                    </div>
-                    <div class="col-md-3 animate-box" data-animate-effect="fadeInBottom">
-                        <div class="services color-4">
-                            <span class="icon2"><i class="icon-dribbble"></i></span>
-                            <h3>Sports</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    	</div>
-    </section>
-
-    <section class="ftco-section" id="sio-section">
-    	<div class="container">
-    		<div class="row justify-content-center py-5 mt-5">
-          <div class="col-md-12 heading-section text-center ftco-animate">
-          	<h1 class="big big-2">BTS SIO</h1>
-            <h2 class="mb-4">Qu'est-ce que le BTS SIO ?</h2>
-            <p>Le BTS SIO (Services Informatiques aux Organisations) est une formation de deux ans qui prépare aux métiers de l'informatique. Il propose deux spécialités : SLAM et SISR.</p>
-          </div>
-        </div>
-    		<div class="row">
-					<div class="col-md-6 text-center d-flex ftco-animate">
-						<a href="#" class="services-1">
-							<span class="icon">
-								<i class="flaticon-analysis"></i>
-							</span>
-							<div class="desc">
-								<h3 class="mb-5">Spécialité SLAM</h3>
-                                <p>Solutions Logicielles et Applications Métiers.</p>
-                                <p>Cette option est centrée sur le développement d'applications (web, mobile, desktop), la programmation et la gestion de bases de données.</p>
-							</div>
-						</a>
-					</div>
-					<div class="col-md-6 text-center d-flex ftco-animate">
-						<a href="#" class="services-1">
-							<span class="icon">
-								<i class="flaticon-ideas"></i>
-							</span>
-							<div class="desc">
-								<h3 class="mb-5">Spécialité SISR</h3>
-                                <p>Solutions d'Infrastructure, Systèmes et Réseaux.</p>
-                                <p>Cette option forme à l'administration des réseaux, la gestion des infrastructures systèmes et la cybersécurité.</p>
-							</div>
-						</a>
-					</div>
-				</div>
-    	</div>
-    </section>
-
-    <section class="ftco-section ftco-no-pb" id="parcours-section">
-    	<div class="container">
-    		<div class="row justify-content-center pb-5">
-          <div class="col-md-10 heading-section text-center ftco-animate">
-          	<h1 class="big big-2">Parcours</h1>
-            <h2 class="mb-4">Mon Parcours</h2>
-            <p>Mon cheminement scolaire et professionnel.</p>
-          </div>
-        </div>
-    		<div class="row">
-    			<div class="col-md-6">
-    				<div class="resume-wrap ftco-animate">
-    					<span class="date">2023 - 2025</span>
-    					<h2>BTS SIO - Option SLAM</h2>
-    					<span class="position">Lycée Léonard de Vinci, Melun</span>
-    					<p class="mt-4">Apprentissage du développement web, mobile, et de la gestion de projet agile.</p>
-    				</div>
-    				<div class="resume-wrap ftco-animate">
-    					<span class="date">2019 - 2022</span>
-    					<h2>Bac Pro Systèmes Numériques</h2>
-    					<span class="position">Lycée de la Tourelle, Sarcelles</span>
-    					<p class="mt-4">Option C : Réseaux Informatiques et Systèmes Communicants (RISC).</p>
-    				</div>
-    			</div>
-
-    			<div class="col-md-6">
-    				<div class="resume-wrap ftco-animate">
-    					<span class="date">2024 - 2025</span>
-    					<h2>Développeur (Stage)</h2>
-    					<span class="position">WeeklyTech</span>
-    					<p class="mt-4">Développement d'un Launcher Minecraft en Java et gestion des versions.</p>
-    				</div>
-    				<div class="resume-wrap ftco-animate">
-    					<span class="date">2024</span>
-    					<h2>Intégrateur Web (Stage)</h2>
-    					<span class="position">Association Tournesol</span>
-    					<p class="mt-4">Création et maintenance du site "Augustine" pour l'association.</p>
-    				</div>
-    			</div>
-    		</div>
-            
-            <div class="row justify-content-center mt-5">
-                <div class="col-md-8 text-center ftco-animate">
-                    <p><strong>Mon objectif :</strong> Poursuivre en licence spécialisée IA pour approfondir mes compétences en Intelligence Artificielle.</p>
-                </div>
-            </div>
     	</div>
     </section>
 
     <section class="ftco-section" id="skills-section">
     	<div class="container">
     		<div class="row justify-content-center pb-5">
-          <div class="col-md-12 heading-section text-center ftco-animate">
-          	<h1 class="big big-2">Skills</h1>
-            <h2 class="mb-4">Mes Compétences</h2>
-            <p>Les technologies que je maîtrise.</p>
-          </div>
-        </div>
+                <div class="col-md-12 heading-section text-center ftco-animate">
+                    <span class="subheading">Stack Technique</span>
+                    <h2 class="mb-4">Mes Compétences</h2>
+                </div>
+            </div>
     		<div class="row">
-                <div class="col-md-4 text-center">
-                    <div class="services-1">
-                        <div class="desc">
-                            <img src="images/HTML5_logo_and_wordmark.png" alt="HTML" style="width:60px; height:auto;">
-                            <h3 class="mt-3">HTML5</h3>
-                        </div>
+                <div class="col-md-3 col-6 mb-4 ftco-animate">
+                    <div class="skill-box">
+                        <img src="images/HTML5_logo_and_wordmark.png" class="skill-icon" alt="HTML">
+                        <h5>HTML / CSS</h5>
                     </div>
     			</div>
-    			<div class="col-md-4 text-center">
-                    <div class="services-1">
-                        <div class="desc">
-                            <img src="images/CSS.png" alt="CSS" style="width:60px; height:auto;">
-                            <h3 class="mt-3">CSS3</h3>
-                        </div>
+    			<div class="col-md-3 col-6 mb-4 ftco-animate">
+                    <div class="skill-box">
+                        <img src="images/JS.png" class="skill-icon" alt="JS">
+                        <h5>JavaScript</h5>
                     </div>
     			</div>
-    			<div class="col-md-4 text-center">
-                    <div class="services-1">
-                        <div class="desc">
-                            <img src="images/JS.png" alt="JS" style="width:60px; height:auto;">
-                            <h3 class="mt-3">JavaScript</h3>
-                        </div>
+                <div class="col-md-3 col-6 mb-4 ftco-animate">
+                    <div class="skill-box">
+                        <img src="images/PHP.png" class="skill-icon" alt="PHP">
+                        <h5>PHP</h5>
                     </div>
     			</div>
-                <div class="col-md-4 text-center">
-                    <div class="services-1">
-                        <div class="desc">
-                            <img src="images/PHP.png" alt="PHP" style="width:60px; height:auto;">
-                            <h3 class="mt-3">PHP</h3>
-                        </div>
+                <div class="col-md-3 col-6 mb-4 ftco-animate">
+                    <div class="skill-box">
+                        <img src="images/SQL.png" class="skill-icon" alt="SQL">
+                        <h5>SQL & BD</h5>
                     </div>
     			</div>
-                <div class="col-md-4 text-center">
-                    <div class="services-1">
-                        <div class="desc">
-                            <img src="images/SQL.png" alt="SQL" style="width:60px; height:auto;">
-                            <h3 class="mt-3">SQL / MySQL</h3>
-                        </div>
+                <div class="col-md-3 col-6 mb-4 ftco-animate">
+                    <div class="skill-box">
+                        <img src="images/Python.png" class="skill-icon" alt="Python">
+                        <h5>Python</h5>
                     </div>
     			</div>
-                <div class="col-md-4 text-center">
-                    <div class="services-1">
-                        <div class="desc">
-                            <img src="images/Python.png" alt="Python" style="width:60px; height:auto;">
-                            <h3 class="mt-3">Python</h3>
-                        </div>
+                 <div class="col-md-3 col-6 mb-4 ftco-animate">
+                    <div class="skill-box">
+                        <img src="images/Kotlin.png" class="skill-icon" alt="Kotlin">
+                        <h5>Kotlin</h5>
                     </div>
     			</div>
-                 <div class="col-md-4 text-center">
-                    <div class="services-1">
-                        <div class="desc">
-                            <img src="images/Kotlin.png" alt="Kotlin" style="width:60px; height:auto;">
-                            <h3 class="mt-3">Kotlin</h3>
-                        </div>
+                <div class="col-md-3 col-6 mb-4 ftco-animate">
+                    <div class="skill-box">
+                        <span class="icon-code" style="font-size:40px; color:#ffbd39;"></span>
+                        <h5 class="mt-2">Java</h5>
+                    </div>
+    			</div>
+                <div class="col-md-3 col-6 mb-4 ftco-animate">
+                    <div class="skill-box">
+                        <span class="icon-git" style="font-size:40px; color:#ffbd39;"></span>
+                        <h5 class="mt-2">Git & Github</h5>
                     </div>
     			</div>
     		</div>
     	</div>
     </section>
 
-    <section class="ftco-section ftco-project" id="projects-section">
+    <section class="ftco-section" id="projects-section">
     	<div class="container">
     		<div class="row justify-content-center pb-5">
-          <div class="col-md-12 heading-section text-center ftco-animate">
-          	<h1 class="big big-2">Projets</h1>
-            <h2 class="mb-4">Mes Projets</h2>
-            <p>Voici les différents projets académiques et personnels réalisés.</p>
-          </div>
-        </div>
+                <div class="col-md-12 heading-section text-center ftco-animate">
+                    <span class="subheading">Portfolio</span>
+                    <h2 class="mb-4">Mes Réalisations</h2>
+                    <p>Projets scolaires, stages et développements personnels.</p>
+                </div>
+            </div>
+            
     		<div class="row">
-                <div class="col-md-4">
-    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/work-1.jpg); /* CHANGE L'IMAGE ICI */">
-    					<div class="overlay"></div>
-	    				<div class="text text-center p-4">
-	    					<h3><a href="https://github.com/Dhikash03/Geoworld" target="_blank">Géoworld</a></h3>
-	    					<span>PHP & SQL</span>
-                            <p class="small text-light mt-2">Application de géopolitique présentant les statistiques des pays.</p>
-	    				</div>
-    				</div>
-    			</div>
-                <div class="col-md-8">
-    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/Augustine.jpg);">
-    					<div class="overlay"></div>
-	    				<div class="text text-center p-4">
-	    					<h3><a href="https://github.com/ljules/Augustine-2024" target="_blank">Site Augustine</a></h3>
-	    					<span>Projet Stage (Web)</span>
-                            <p class="small text-light mt-2">Développement du site vitrine pour l'association Tournesol.</p>
-	    				</div>
-    				</div>
-    			</div>
+                <div class="col-md-4 mb-4 ftco-animate">
+                    <div class="project-card">
+                        <div class="project-img" style="background-image: url('images/Augustine.jpg');"></div>
+                        <div class="project-content">
+                            <h3>Site Augustine</h3>
+                            <div class="mb-3">
+                                <span class="badge-tech">HTML/CSS</span>
+                                <span class="badge-tech">JS</span>
+                                <span class="badge-tech">Stage</span>
+                            </div>
+                            <p>Développement complet d'un site vitrine pour l'association Tournesol. Intégration de galeries et design responsive.</p>
+                            <a href="https://github.com/ljules/Augustine-2024" target="_blank" class="btn-project">Voir sur GitHub</a>
+                        </div>
+                    </div>
+                </div>
 
-                <div class="col-md-8">
-    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/Launcher-MC.png);">
-    					<div class="overlay"></div>
-	    				<div class="text text-center p-4">
-	    					<h3><a href="https://github.com/Dhikash03/Laucher_Minecraft" target="_blank">Launcher Minecraft</a></h3>
-	    					<span>Projet Stage (Java)</span>
-                            <p class="small text-light mt-2">Création d'un lanceur personnalisé supportant les mods Forge.</p>
-	    				</div>
-    				</div>
-    			</div>
-                <div class="col-md-4">
-    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/work-2.jpg); /* CHANGE L'IMAGE ICI */">
-    					<div class="overlay"></div>
-	    				<div class="text text-center p-4">
-	    					<h3><a href="https://github.com/Dhikash03/Kotlin_Aventure_Sprint3" target="_blank">Kotlin Aventure</a></h3>
-	    					<span>Développement Mobile</span>
-                            <p class="small text-light mt-2">Jeu d'aventure textuel développé en Kotlin.</p>
-	    				</div>
-    				</div>
-    			</div>
+                <div class="col-md-4 mb-4 ftco-animate">
+                    <div class="project-card">
+                        <div class="project-img" style="background-image: url('images/Launcher-MC.png');"></div>
+                        <div class="project-content">
+                            <h3>Launcher Minecraft</h3>
+                            <div class="mb-3">
+                                <span class="badge-tech">Java</span>
+                                <span class="badge-tech">JavaFX</span>
+                                <span class="badge-tech">Stage</span>
+                            </div>
+                            <p>Création d'un lanceur personnalisé supportant les mods Forge et l'authentification Microsoft.</p>
+                            <a href="https://github.com/Dhikash03/Laucher_Minecraft" target="_blank" class="btn-project">Voir sur GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4 ftco-animate">
+                    <div class="project-card">
+                        <div class="project-img" style="background-image: url('images/work-1.jpg');"></div> <div class="project-content">
+                            <h3>Géoworld</h3>
+                            <div class="mb-3">
+                                <span class="badge-tech">PHP</span>
+                                <span class="badge-tech">SQL</span>
+                                <span class="badge-tech">Bootstrap</span>
+                            </div>
+                            <p>Application de géopolitique permettant de consulter et modifier les données démographiques des pays.</p>
+                            <a href="https://github.com/Dhikash03/Geoworld" target="_blank" class="btn-project">Voir sur GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4 ftco-animate">
+                    <div class="project-card">
+                        <div class="project-img" style="background-image: url('images/work-2.jpg');"></div>
+                        <div class="project-content">
+                            <h3>Kotlin Aventure</h3>
+                            <div class="mb-3">
+                                <span class="badge-tech">Kotlin</span>
+                                <span class="badge-tech">POO</span>
+                            </div>
+                            <p>Jeu d'aventure textuel complet avec gestion de personnage, inventaire et système de combat.</p>
+                            <a href="https://github.com/Dhikash03/Kotlin_Aventure_Sprint3" target="_blank" class="btn-project">Voir sur GitHub</a>
+                        </div>
+                    </div>
+                </div>
                 
-                <div class="col-md-6">
-    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/work-3.jpg); /* CHANGE L'IMAGE ICI */">
-    					<div class="overlay"></div>
-	    				<div class="text text-center p-4">
-	    					<h3><a href="https://github.com/Dhikash03/" target="_blank">Sushi App</a></h3>
-	    					<span>JavaScript</span>
-                            <p class="small text-light mt-2">Site e-commerce avec gestion panier.</p>
-	    				</div>
+                 <div class="col-md-4 mb-4 ftco-animate">
+                    <div class="project-card">
+                        <div class="project-img" style="background-image: url('images/work-3.jpg');"></div>
+                        <div class="project-content">
+                            <h3>Savon API</h3>
+                            <div class="mb-3">
+                                <span class="badge-tech">PHP</span>
+                                <span class="badge-tech">API Rest</span>
+                            </div>
+                            <p>Backend pour une application de gestion de stock de produits artisanaux.</p>
+                            <a href="https://github.com/Dhikash03/SavonAPI_2" target="_blank" class="btn-project">Voir sur GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="col-md-4 mb-4 ftco-animate">
+                    <div class="project-card">
+                        <div class="project-img" style="background-image: url('images/work-4.jpg');"></div>
+                        <div class="project-content">
+                            <h3>Sushi App</h3>
+                            <div class="mb-3">
+                                <span class="badge-tech">JavaScript</span>
+                                <span class="badge-tech">DOM</span>
+                            </div>
+                            <p>Site e-commerce dynamique pour un restaurant de sushis avec panier en temps réel.</p>
+                            <a href="https://github.com/Dhikash03/" target="_blank" class="btn-project">Voir sur GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+    	</div>
+    </section>
+
+    <section class="ftco-section ftco-no-pb" id="parcours-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+                <div class="col-md-10 heading-section text-center ftco-animate">
+                    <span class="subheading">Curriculum Vitae</span>
+                    <h2 class="mb-4">Mon Parcours</h2>
+                </div>
+            </div>
+    		<div class="row">
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2023 - 2025</span>
+    					<h2>BTS SIO - Option SLAM</h2>
+    					<span class="position">Lycée Léonard de Vinci, Melun</span>
+    					<p class="mt-4">Développement Web, Mobile & Gestion de projet.</p>
     				</div>
     			</div>
-                <div class="col-md-6">
-    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/work-4.jpg); /* CHANGE L'IMAGE ICI */">
-    					<div class="overlay"></div>
-	    				<div class="text text-center p-4">
-	    					<h3><a href="https://github.com/Dhikash03/SavonAPI_2" target="_blank">Savon API</a></h3>
-	    					<span>Backend / API</span>
-                            <p class="small text-light mt-2">API Rest pour gestion de stock.</p>
-	    				</div>
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2019 - 2022</span>
+    					<h2>Bac Pro Systèmes Numériques</h2>
+    					<span class="position">Lycée de la Tourelle</span>
+    					<p class="mt-4">Mention Bien - Spécialité Réseaux.</p>
     				</div>
     			</div>
     		</div>
     	</div>
-    </section>
-
-    <section class="ftco-section" id="stage-section">
-      <div class="container">
-        <div class="row justify-content-center pb-5">
-          <div class="col-md-12 heading-section text-center ftco-animate">
-            <h1 class="big big-2">Stages</h1>
-            <h2 class="mb-4">Mes Stages</h2>
-            <p>Détails de mes expériences professionnelles.</p>
-          </div>
-        </div>
-        <div class="row d-flex">
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
-              <a href="https://github.com/ljules/Augustine-2024" class="block-20" style="background-image: url('images/Augustine.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-              	<div class="d-flex align-items-center mb-3 meta">
-	                <p class="mb-0">
-	                	<span class="mr-2">2024</span>
-	                	<a href="#" class="mr-2">Association Tournesol</a>
-	                </p>
-                </div>
-                <h3 class="heading"><a href="https://github.com/ljules/Augustine-2024">Site Augustine</a></h3>
-                <p>Mise en place d'un site web pour l'association Tournesol (Lycée Léonard de Vinci). Nous avons utilisé <strong>JavaScript, Pelican, HTML/CSS</strong> et des plugins de galerie.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
-              <a href="https://github.com/Dhikash03/Laucher_Minecraft" class="block-20" style="background-image: url('images/Launcher-MC.png');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-              	<div class="d-flex align-items-center mb-3 meta">
-	                <p class="mb-0">
-	                	<span class="mr-2">2024 - 2025</span>
-	                	<a href="#" class="mr-2">WeeklyTech</a>
-	                </p>
-                </div>
-                <h3 class="heading"><a href="https://github.com/Dhikash03/Laucher_Minecraft">Launcher Minecraft</a></h3>
-                <p>Réalisation d'un Launcher permettant la connexion (Microsoft/Crack) et supportant les mods Forge. Développement principal en <strong>Java</strong> avec l'IDE <strong>IntelliJ IDEA</strong>.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
 
     <section class="ftco-section" id="blog-section">
       <div class="container">
         <div class="row justify-content-center mb-5 pb-5">
           <div class="col-md-7 heading-section text-center ftco-animate">
-            <h1 class="big big-2">Veille</h1>
-            <h2 class="mb-4">Veille Technologique</h2>
-            <p>Sujet : La Robotique Humanoïde & l'IA (Le robot "Blue" de Nvidia).</p>
+            <span class="subheading">Veille Technologique</span>
+            <h2 class="mb-4">Robotique & IA</h2>
+            <p>Mon sujet de veille : L'évolution de la robotique humanoïde avec l'IA.</p>
           </div>
         </div>
-        <div class="row d-flex">
-            <div class="col-md-12">
-                <div class="blog-entry">
-                    <div class="text">
-                        <h3 class="heading">Le nouveau robot de l'entreprise Nvidia : "Blue"</h3>
-                        <p>Présenté à la GTC 2025, Blue est un robot humanoïde interactif conçu avec Google DeepMind. Il marque un tournant dans l'IA embarquée.</p>
-                        
-                        <h4 class="mt-4">Pourquoi ce sujet ?</h4>
-                        <ul>
-                            <li>L'IA en temps réel</li>
-                            <li>L'interaction homme-machine (HRI)</li>
-                            <li>La robotique dans les services</li>
-                        </ul>
-                        
-                        <h4 class="mt-4">Présentation</h4>
-                        <p>Blue utilise des puces IA avancées pour réagir aux gestes et à la voix en temps réel. Il est multimodal (vision, audition, parole).</p>
-                        
-                        <div class="mt-4 p-3 bg-light">
-                            <h5>Sources & Similaires :</h5>
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <div class="project-card p-5">
+                    <h3 class="text-white">Focus : Le Robot "Blue" de Nvidia</h3>
+                    <p class="mt-3">Présenté à la GTC 2025, Blue est un robot humanoïde interactif conçu avec Google DeepMind. Il marque un tournant dans l'IA embarquée grâce à sa capacité d'interaction multimodale en temps réel.</p>
+                    <hr style="border-color:#333;">
+                    <div class="row mt-4">
+                        <div class="col-md-6">
+                            <h5 style="color:#ffbd39">Thèmes clés</h5>
                             <ul>
-                                <li><a href="https://www.lebigdata.fr" target="_blank">LeBigData - Nvidia Blue</a></li>
-                                <li>Ameca (Engineered Arts)</li>
-                                <li>Optimus (Tesla)</li>
-                                <li>Sophia (Hanson Robotics)</li>
+                                <li>Interaction Homme-Machine (HRI)</li>
+                                <li>IA Générative embarquée</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h5 style="color:#ffbd39">Sources</h5>
+                            <ul>
+                                <li>LeBigData.fr</li>
+                                <li>Conférence GTC Nvidia 2025</li>
                             </ul>
                         </div>
                     </div>
@@ -464,24 +376,14 @@
       <div class="container">
       	<div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-7 heading-section text-center ftco-animate">
-            <h1 class="big big-2">Contact</h1>
-            <h2 class="mb-4">Me Contacter</h2>
-            <p>N'hésitez pas à me laisser un message pour toute opportunité.</p>
+            <span class="subheading">Contact</span>
+            <h2 class="mb-4">Travaillons ensemble</h2>
           </div>
         </div>
 
         <div class="row d-flex contact-info mb-5">
           <div class="col-md-6 col-lg-4 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-map-signs"></span>
-          		</div>
-          		<h3 class="mb-4">Adresse</h3>
-	            <p>Villiers le Bel, France</p>
-	          </div>
-          </div>
-          <div class="col-md-6 col-lg-4 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
+          	<div class="align-self-stretch box p-4 text-center" style="background:#1e1e1e;">
           		<div class="icon d-flex align-items-center justify-content-center">
           			<span class="icon-phone2"></span>
           		</div>
@@ -490,62 +392,40 @@
 	          </div>
           </div>
           <div class="col-md-6 col-lg-4 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
+          	<div class="align-self-stretch box p-4 text-center" style="background:#1e1e1e;">
           		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-paper-plane"></span>
+          			<span class="icon-envelope"></span>
           		</div>
           		<h3 class="mb-4">Email</h3>
 	            <p><a href="mailto:dhikash9504@gmail.com">dhikash9504@gmail.com</a></p>
 	          </div>
           </div>
-        </div>
-
-        <div class="row no-gutters block-9">
-          <div class="col-md-6 order-md-last d-flex">
-            <form action="#" class="bg-light p-4 p-md-5 contact-form">
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Votre Nom">
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Votre Email">
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Sujet">
-              </div>
-              <div class="form-group">
-                <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
-              </div>
-              <div class="form-group">
-                <input type="submit" value="Envoyer" class="btn btn-primary py-3 px-5">
-              </div>
-            </form>
-          
-          </div>
-
-          <div class="col-md-6 d-flex">
-          	<div class="img" style="background-image: url(images/about.jpg);"></div>
+          <div class="col-md-6 col-lg-4 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center" style="background:#1e1e1e;">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-map-signs"></span>
+          		</div>
+          		<h3 class="mb-4">Localisation</h3>
+	            <p>Villiers le Bel, France</p>
+	          </div>
           </div>
         </div>
       </div>
     </section>
     
-
     <footer class="ftco-footer ftco-section">
       <div class="container">
         <div class="row">
           <div class="col-md-12 text-center">
             <p>
-                Dhikash Janarthanaan &copy;<script>document.write(new Date().getFullYear());</script> Tous droits réservés | Template adapté de Colorlib
+                Copyright &copy;<script>document.write(new Date().getFullYear());</script> Dhikash Janarthanan
             </p>
           </div>
         </div>
       </div>
     </footer>
     
-  
-
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
-
 
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
@@ -559,7 +439,6 @@
   <script src="js/aos.js"></script>
   <script src="js/jquery.animateNumber.min.js"></script>
   <script src="js/scrollax.min.js"></script>
-  
   <script src="js/main.js"></script>
     
   </body>
