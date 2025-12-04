@@ -259,29 +259,8 @@
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        // Initialisation des animations
-        AOS.init({
-            duration: 800, // Durée de l'animation en ms
-            once: true, // L'animation ne se joue qu'une seule fois
-            offset: 100 // Déclenche l'animation un peu avant que l'élément soit visible
-        });
-        
-        // Script pour le Menu Mobile
-        const hamburger = document.querySelector('.hamburger');
-        const navLinks = document.querySelector('.nav-links');
-        const links = document.querySelectorAll('.nav-links li');
-        
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
 
-        // Fermer le menu quand on clique sur un lien (sur mobile)
-        links.forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-            });
-        });
-    </script>
+    <script src="js/main.js"></script>
 </body>
 </html>
